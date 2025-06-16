@@ -2,6 +2,8 @@
 
 Framework minimal berbasis PHP native + Laravel Illuminate components. Sangat ringan, cocok untuk proyek kecil, cepat, dan fleksibel.
 
+konsepnya sama seperti php biasa kalian bisa handle seperti php umumnya atau campur dengan package pakage laravel seperti ORM, request, dan validation. Tergantung pada selera.
+
 ---
 
 ## 📦 Struktur Folder
@@ -57,7 +59,7 @@ DB_PASSWORD=
 ### **Linux / macOS:**
 
 ```bash
-php -S localhost:8000 index.php
+php -S localhost:8000
 ```
 
 ### **Windows + XAMPP:**
@@ -67,6 +69,11 @@ php -S localhost:8000 index.php
    - Klik Start → ketik `Environment Variables`
    - Edit `PATH`
    - Tambahkan: `C:\xampp\php`
+   - Kemudian running script dibawah atau letak ke dalam htdocs seperti php biasa
+   
+```bash
+php -S localhost:8000
+```
 ---
 
 ## 🧱 Routing
