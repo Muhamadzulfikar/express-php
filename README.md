@@ -96,6 +96,29 @@ $router->post('/users/{id}/delete', [UserController::class, 'destroy']);
 
 ---
 
+## Frontend
+
+Semua UI frontend ditulis ke dalam folder Views.
+untuk cara pemanggilan
+
+- Menggunakan sub folder
+```php
+return view('subfolder/namafile.php');
+```
+
+- Menggunakan langsung file
+```php
+return view('namafile.php')
+```
+
+- Parsing data ke UI
+```php
+$variable = 'isi variable';
+return view('subfolder/namafile.php', [
+    'variable' => $variable
+])
+```
+
 ## 📂 Controller
 
 Contoh `Controllers/UserController.php`:
@@ -120,7 +143,8 @@ class UserController {
         ]);
 
         User::create($data);
-        redirect('/users');
+        header('Location: /users');
+        exit;
     }
 }
 ```
